@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>フォームに今日の日付をデフォルトで入れる</title>
+	<!-- Bootstrap -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/main.css" rel="stylesheet">
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<script>
+		function setToday(){
+			now = new Date();
+			document.dateform.thisyear.value = now.getFullYear();
+			document.dateform.thismonth.value = now.getMonth() + 1;
+			document.dateform.thisday.value = now.getDate();
+		}
+	</script>
+	</head>
+	<body>
+		<div class="container">
+			<h2>今日の日付をセットする</h2>
+			<p>
+				下のフォームに、年月日のデフォルト値が入っています。これらをボタン押すだけで今日の日付に変えるように、"setToday()"関数の内容を書き換えてください。
+			</p>
+			<form id="dateform" name="dateform">
+				<table class="table table-striped table-bordered table-hover">
+					<!-- 取得用URL http://mimilb.blob.core.windows.net/mimilb-data-log/&lt;session-id&gt;-&lt;audio-seqno&gt;.dat -->
+					<tr><td><input type="text"  id="thisyear" value="1970" class="widetext" />年</td></tr>
+					<tr><td><input type="text"  id="thismonth" value="1" class="widetext" />月</td></tr>
+					<tr><td><input type="text"  id="thisday" value="1" class="widetext" />日</td></tr>
+				</table>
+				<br />
+				<input type="button" onClick="setToday()" value="今日の日付をセット" class="btn btn-primary">
+			</form>
+		</div>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.min.js"></script>
+		</div>
+	</body>
+</html>
