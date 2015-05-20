@@ -18,7 +18,14 @@
 	<script>
 		function setToday(){
 			<!-- ここに今日の年月日をセットするプログラムを書いてください。 -->
-		}
+                dd = new Date();
+                YY = dd.getFullYear();
+                MM = dd.getMonth()+1;
+                DD = dd.getDate();
+                document.dateform.thisyear.value = YY;
+                document.dateform.thismonth.value = MM;
+                document.dateform.thisday.value = DD;
+        }
 	</script>
 	</head>
 	<body>
