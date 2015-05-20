@@ -1,0 +1,22 @@
+.widetext {
+	width: 300px;
+}
+
+#question {
+	font-size: 144pt;
+}
+.color_red {
+	color: rgb(255, 0, 0);
+}
+
+.color_green {
+	color: rgb(0, 255, 0);
+}
+
+.color_blue {
+	color: rgb(0, 0, 255);
+}
+
+.result {
+	font-size: 72pt;
+}
