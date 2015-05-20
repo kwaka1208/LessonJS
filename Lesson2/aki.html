@@ -27,7 +27,11 @@
 		}
 
 		function updateClock() {
-            setInterval("startClock()",1);
+			/*
+				プログラムとして間違いでは無いのですが、無駄が発生してます。
+				以下の行を見直してください。この時計の最小単位は1秒です。
+			*/
+			setInterval("startClock()",1);
 		}
 		</script>
 	</head>
@@ -39,7 +43,6 @@
 			</p>
 			<form id="dateform" name="dateform">
 				<table class="table table-striped table-bordered table-hover">
-					<!-- 取得用URL http://mimilb.blob.core.windows.net/mimilb-data-log/&lt;session-id&gt;-&lt;audio-seqno&gt;.dat -->
 					<tr><td>
 						<input type="text"  id="thisyear" value="1970" class="" />年
 						<input type="text"  id="thismonth" value="1" class="" />月
