@@ -28,10 +28,9 @@
 
 		function updateClock() {
 			/*
-				プログラムとして間違いでは無いのですが、無駄が発生してます。
-				以下の行を見直してください。この時計の最小単位は1秒です。
+				setIntervalの引数を変えました！
 			*/
-			setInterval("startClock()",1);
+			setInterval("startClock()",1000);
 		}
 		</script>
 	</head>
