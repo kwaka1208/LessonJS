@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>メッセージを一文字ずつ表示する</title>
+	<!-- Bootstrap -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/main.css" rel="stylesheet">
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<script>
+		var len = 0;	// 表示済みの文字列カウント用
+		var msg = "ただいまキャンペーン実施中！！！";
+
+		/**
+			msgの内容を一文字ずつ表示して、全て表示し終わったら処理を終了します。
+		*/
+		function MessageBoard() {
+			// ここに処理を書いてください。
+		}
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<h2>メッセージを一文字ずつ表示する</h2>
+			<p>
+				この下に、"ただいまキャンペーン実施中！！！"を一秒間隔で最初は一文字、1秒後に二文字と徐々に表示される文字列が長くなるよう、"MessageBoard()"と"updateMessage()"関数の内容を書き換えてください。
+			</p>
+			<input type="button" onClick="MessageBoard()" value="表示開始" class="btn btn-primary">
+			<div class="h1" id="message-board"></div>
+		</div>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.min.js"></script>
+		</div>
+	</body>
+</html>
