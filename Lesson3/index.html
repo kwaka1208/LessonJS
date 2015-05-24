@@ -23,10 +23,17 @@
 			msgの内容を一文字ずつ表示して、全て表示し終わったら処理を終了します。
 		*/
 		function MessageBoard() {
-			// ここに処理を書いてください。
-            msg2 = msg.charAt(0);
-            document.getElementById("message-board").innerHTML = msg2;
-		}
+			// ここに処理を書いてください。           
+            document.getElementById("message-board").innerHTML = msg.charAt(1);
+            var msgb = document.getElementById("message-board").innerHTML;
+            len = msgb.length;    
+            
+            if(len<5){
+            alert("5以下です");
+            }else{
+            alert("5以上です");
+            }
+        }
 		</script>
 	</head>
 	<body>
