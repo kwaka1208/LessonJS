@@ -26,9 +26,22 @@
 			document.getElementById("message-board").innerHTML = msg.substring(0, len);
 			len++;
 			if (len <= msg.length) {
-				setTimeout("MessageBoard()", 500);
+				setTimeout("MessageBoard()", 1000);
 			}
 		}
+
+		function MessageBoard2() {
+			// ここに処理を書いてください。
+			var msgl = msg.length;
+			var msgb = document.getElementById("message-board").innerHTML;
+			len = msgb.length;
+			
+			if(len < msgl){
+				document.getElementById("message-board").innerHTML = msg.substring(0,len+1);
+				setTimeout("MessageBoard()",1000);
+			}
+		}
+
 		</script>
 	</head>
 	<body>
