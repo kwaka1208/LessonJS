@@ -23,14 +23,15 @@
 			msgの内容を一文字ずつ表示して、全て表示し終わったら処理を終了します。
 		*/
 		function MessageBoard() {
-			// ここに処理を書いてください。           
-            var msgb = document.getElementById("message-board").innerHTML;
-            len = msgb.length;    
+			// ここに処理を書いてください。         
+            var msgl = msg.length;
+            var msgb = document.getElementById("message-board").innerHTML;    
+            len = msgb.length;
             
-            if(len<16){
-                document.getElementById("message-board").innerHTML = msg.substr(0,len+1);
+            if(len == msgl){
+                return;
             }else{
-                break;
+                document.getElementById("message-board").innerHTML = msg.substring(0,len+1);             
             }
           
             setTimeout("MessageBoard()",1000);
