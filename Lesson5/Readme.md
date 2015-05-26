@@ -6,4 +6,4 @@
 ## 必要なJavaScript関数
 このプログラムを書くために、必要なJavaScriptの機能は以下の通りです。
 
-* [テキストの書き換え処理](http://www.pori2.net/js/DOM/2.html)
+* [HTMLコンテンツの取得と書き換え処理](http://www.pori2.net/js/DOM/2.html)
