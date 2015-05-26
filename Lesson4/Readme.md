@@ -9,3 +9,4 @@
 * [文字列の一部を取り出す機能](http://www.pori2.net/js/number/8.html)
 * [テキストの書き換え処理](http://www.pori2.net/js/DOM/2.html)
 * [繰り返し処理](http://www.pori2.net/js/kihon/14.html)
+* [文字列の連結](http://www.tohoho-web.com/js/operator.htm#arithmetic)
