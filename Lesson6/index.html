@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ひとりでしりとり</title>
+	<!-- Bootstrap -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/main.css" rel="stylesheet">
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<script>
+		var lastWord = "";
+		/**
+			フォームで入力された文字列をリストに追加する。
+		*/
+		function Shiritori() {
+			// ここに処理を書いてください。
+		}
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<h2>ひとりでしりとり</h2>
+			<p>
+				以下の動作になるように、"Shiritori()"関数を作成してください。
+				<ol>
+					<li>フォームに言葉を入力して、「しりとりをする」ボタンを押します。</li>
+					<li>入力された言葉が「ん」で終わっていた場合は、"最後が「ん」で終わっています。違う言葉を入力してください"とエラーメッセージを表示してください。</li>
+					<li>入力された言葉の最初と、ひとつ前の言葉の最後が繋がっていない時には、"入力された言葉の最初と、前の言葉の最後が違います。別の言葉を入力してください"とエラーメッセージを表示してください。</li>
+					<li>どちらのチェックもOKの場合は、入力された言葉をLesson5の時と同じようにリストに番号付リストに追加してください。</li>
+					<li>最後に、次の言葉が入力しやすいようにフォームの中を空にしてください。</li>
+				</ol>
+			</p>
+			<form id="main_form">
+				<input type="text" width="10" value="" id="list_item">
+				<input type="button" onClick="Shiritori()" value="しりとりをする" class="btn btn-primary">
+			</form>
+			<ol id="list">
+			</ol>
+		</div>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.min.js"></script>
+		</div>
+	</body>
+</html>
