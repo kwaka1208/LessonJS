@@ -43,8 +43,12 @@
 	<body>
 		<div class="container">
 			<h2>メッセージを一文字ずつ表示する</h2>
-			<p>
-				この下に、"ただいまキャンペーン実施中！！！"を一秒間隔で最初は一文字、1秒後に二文字と徐々に表示される文字列が長くなるよう、"MessageBoard()"関数の内容を書き換えてください。
+				以下の動作になるように、"MessageBoard()"と"updateMessage()"関数を作成してください。
+				<ol>
+					<li>"ただいまキャンペーン実施中！！！"の一文字目だけを表示します。</li>
+					<li>一秒後には、さらにもう一文字多く表示し、"ただ"まで表示します。</li>
+					<li>この処理を繰り返して、表示内容が一文字ずつ増えていくようにし、全文字が表示されたら処理を終了してください。</li>
+				</ol>
 			</p>
 			<input type="button" onClick="MessageBoard()" value="表示開始" class="btn btn-primary">
 			<div class="h1" id="message-board"></div>

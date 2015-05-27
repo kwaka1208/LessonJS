@@ -20,6 +20,7 @@
 			今日の年月日をセットする。
 		*/
 		function setToday(){
+			// ここに処理を書いてください。
 			now = new Date();
 			document.dateform.thisyear.value = now.getFullYear();
 			document.dateform.thismonth.value = now.getMonth() + 1;
@@ -31,7 +32,10 @@
 		<div class="container">
 			<h2>今日の日付をセットする</h2>
 			<p>
-				下のフォームに、年月日のデフォルト値が入っています。これらをボタン押すだけで今日の日付に変えるように、"setToday()"関数の内容を書き換えてください。
+				以下の動作になるように、"setToday()"関数を作成してください。
+				<ol>
+					<li>下のフォームの年月日を、ボタンを押した後、今日の日付に変えてください。</li>
+				</ol>
 			</p>
 			<form id="dateform" name="dateform">
 				<table class="table table-striped table-bordered table-hover">
