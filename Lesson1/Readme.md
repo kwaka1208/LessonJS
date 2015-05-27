@@ -5,8 +5,8 @@
 
 1. フォーム内の年月日を、ボタンを押した後、今日の日付に変えてください。て
 
-## 必要なJavaScript関数
-このプログラムを書くために、必要なJavaScriptの機能は以下の通りです。
+## 参照情報へのリンク
+この課題に必要な情報は、以下の通りです。
 
 * [日付を取得する](http://www.tohoho-web.com/js/date.htm)
-* [フォームに値をセットする](www.tohoho-web.com/js/form.htm)
+* [フォームに値をセットする](http://www.tohoho-web.com/js/form.htm)
