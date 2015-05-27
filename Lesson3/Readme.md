@@ -10,5 +10,5 @@
 この課題に必要な情報は、以下の通りです。
 
 * [文字列の一部を取り出す機能](http://www.pori2.net/js/number/8.html)
-* 一定間隔で処理を実行機能["setTimeout"](http://www.pori2.net/js/timer/2.html)
+* [一定間隔で処理を実行する"setTimeout"](http://www.pori2.net/js/timer/2.html)
 * [条件分岐処理](http://www.pori2.net/js/kihon/10.html)

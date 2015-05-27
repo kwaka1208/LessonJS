@@ -9,4 +9,4 @@
 
 * [日付を取得する](http://www.tohoho-web.com/js/date.htm)
 * [フォームに値をセットする](http://www.tohoho-web.com/js/form.htm)
-* [一定間隔で処理を実行する](http://www.pori2.net/js/timer/1.html)
+* [一定間隔で処理を実行する"setInterval"](http://www.pori2.net/js/timer/1.html)
