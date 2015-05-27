@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>文字列を反転させる</title>
+	<!-- Bootstrap -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/main.css" rel="stylesheet">
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<script>
+		/**
+			文字列を反転させてください。
+		*/
+		function ReverseMessage() {
+			// ここに処理を書いてください。
+            var original = document.getElementById("original").innerHTML;      
+           
+            for (var i=9 ; i >= 0; i=i-1){
+                var rev = original.charAt(i);
+                document.getElementById("reverse").innerHTML += rev;           
+            }
+		}
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<h2>文字列を反転させる</h2>
+			<p>
+				この下の、"１２３４５６７８９０"を並べ替えて、"０９８７６５４３２１"になるよう、"ReverseMessage()"関数の内容を書き換えてください。反転結果は、id="reverse"のdivタグの中に出力してください。
+			</p>
+			<input type="button" onClick="ReverseMessage()" value="反転開始" class="btn btn-primary">
+			<div class="h1" id="original">１２３４５６７８９０</div>
+			<div class="h1" id="reverse"></div>
+		</div>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.min.js"></script>
+		</div>
+	</body>
+</html>
