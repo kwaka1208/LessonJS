@@ -23,7 +23,7 @@
 			// ここに処理を書いてください。
             var original = document.getElementById("original").innerHTML;      
            
-            for (var i=9 ; i >= 0; i=i-1){
+            for (var i=original.length ; i >= 0; i--){
                 var rev = original.charAt(i);
                 document.getElementById("reverse").innerHTML += rev;           
             }
