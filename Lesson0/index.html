@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JavaScript入門</title>
+	<!-- Bootstrap -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/main.css" rel="stylesheet">
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<script>
+		/**
+			functionの中に書かれた部分は、そのfunctionが呼び出された時に動作します。
+		*/
+		function displayMessage(count){
+			document.write("functionは、呼び出された時だけ実行されます。これは " +  count + "回目<br>");
+		}
+		/**
+			functionの実行は、ボタンが押された時とかにも出来ます。
+		*/
+		function functionButton(count){
+			document.getElementById("button1").value = "押されました";
+			document.getElementById("button1").className = "btn btn-danger";
+		}
+
+		function lightSwitch(count){
+			if (document.getElementById("button2").value == "OFF")
+			{
+				document.getElementById("button2").value = "ON";
+				document.getElementById("button2").className = "btn btn-danger";
+				document.getElementById("light").src = "light_on.svg";
+			}
+			else
+			{
+				document.getElementById("button2").value = "OFF";
+				document.getElementById("button2").className = "btn btn-primary";
+				document.getElementById("light").src = "light_off.svg";
+			}
+		}
+
+		/**
+			functionの外に書かれている部分は、ファイルが読み込まれた時に動作します。
+		*/
+		var startupMessage = "functionとして書かれていないので上から順番に実行されます。";
+		alert(startupMessage);
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<p>
+				<script>
+					/**
+						ここも、functionの中ではないので、読み込み時に実行されます。
+					*/
+					alert("ここからbodyタグの中の処理です");
+					document.write("<h2>function以外の処理は上から順番に実行されます。ここが２番目。</h2>");
+					alert("ここからfunctionを呼び出します、1回目");
+					displayMessage(1);
+					alert("次が2回目");
+					displayMessage(2);
+					alert("次が3回目");
+					displayMessage(3);
+					alert("次が4回目");
+					displayMessage(4);
+					document.write("これで、終わりです。<br>");
+				</script>
+			</p>
+			<hr>
+			<p>
+				<input type="button" onClick="functionButton()" value="このボタンを押してみてください" class="btn btn-primary" id="button1">
+			</p>
+			<hr>
+			<p>
+				<h2>↓電球のON/OFF操作ができます。</h2>
+				<input type="button" onClick="lightSwitch()" value="OFF" class="btn btn-primary" id="button2">
+				<br clear="all">
+				<img src="light_off.svg" id="light" width="50%" height="20%">
+			</p>
+		</div>
+	</body>
+</html>
