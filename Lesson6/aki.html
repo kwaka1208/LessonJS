@@ -16,28 +16,33 @@
 	<![endif]-->
 
 	<script>
-		var lastWord = "";
+        //var inputWord = "";
+        var lastWord = "";
         var firstWord = "";
-        var inputWord = "";
+        var prelastWord = "";
 		/**
 			フォームで入力された文字列をリストに追加する。
 		*/
 		function Shiritori() {
 			// ここに処理を書いてください。
-            inputWord = document.getElementById("list_item").value;
+            var inputWord = document.getElementById("list_item").value;
             // 最後の文字の取得
             var length = inputWord.length;
             lastWord = inputWord.charAt(length-1);
             //最初の文字の取得
             firstWord = inputWord.charAt(0);
+            //前の文字の最後の文字の取得
+            var prelength = preinputWord.length;
+            prelastWord = preinputWord.charAt(prelength-1);
             
-            if(lastWord== "ん")
-            {
+            if(lastWord== "ん"){
             alert("最後が「ん」で終わっています。違う言葉を入力してください");
-            } else{
-             document.getElementById("list").innerHTML = "<li>"+inputWord+"</li>";        
+            }else if(prelastWord != firstWord){
+            alert("入力された言葉の最初と、前の言葉の最後が違います。別の言葉を入力してください");        
+            }else{
+            document.getElementById("list").innerHTML += "<li>"+inputWord+"</li>";
             }
-            
+        var preinputWord = inputWord;    
 		}
 		</script>
 	</head>
