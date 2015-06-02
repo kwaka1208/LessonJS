@@ -21,11 +21,13 @@
         var firstLetter = "";
         var preinputWord = "";
         var prelastLetter = "";
+        var count = 0;
 		/**
 			フォームで入力された文字列をリストに追加する。
 		*/
 		function Shiritori() {
 			// ここに処理を書いてください。
+        
             //フォームに入力した文字を格納
             inputWord = document.getElementById("list_item").value;
             // 最後の文字の取得
@@ -34,17 +36,34 @@
             //最初の文字の取得
             firstLetter = inputWord.charAt(0);
             
-            if(lastLetter== "ん"){
-            alert("最後が「ん」で終わっています。違う言葉を入力してください");
-            }else if(prelastLetter != firstLetter){
-            alert("入力された言葉の最初と、前の言葉の最後が違います。別の言葉を入力してください");        
+            if(count == 0){
+                 if(lastLetter== "ん"){
+                    alert("最後が「ん」で終わっています。違う言葉を入力してください");   
+                 }else{
+                    document.getElementById("list").innerHTML += "<li>"+inputWord+"</li>";
+                }               
             }else{
-            document.getElementById("list").innerHTML += "<li>"+inputWord+"</li>";
+                 if(lastLetter== "ん"){
+                     alert("最後が「ん」で終わっています。違う言葉を入力してください");
+                     return;
+                 }else if(prelastLetter != firstLetter){
+                     alert("入力された言葉の最初と、前の言葉の最後が違います。別の言葉を入力してください");    
+                     return;
+                 }else{
+                    document.getElementById("list").innerHTML += "<li>"+inputWord+"</li>";
+                }  
             }
+                      
             //前の文字の最後の文字の取得
             preinputWord = inputWord;
             var prelength = preinputWord.length;
-            prelastLetter = preinputWord.charAt(prelength-1);                
+            prelastLetter = preinputWord.charAt(prelength-1);  
+            
+            //フォームの内容を空欄に
+            document.getElementById("list_item").value = "";
+  
+            //count up
+            count ++;
 		}
 		</script>
 	</head>
