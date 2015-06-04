@@ -41,7 +41,8 @@
                     alert("最後が「ん」で終わっています。違う言葉を入力してください");     
                 return;
             }else{
-                 if(count =! 0){
+                 if(count =! 0){　// <-ここを見直してください。今、ここで"count"の中身が"true"になってしまっています。
+					 			 // （参考） http://www.pori2.net/js/kihon/10.html
                     if(prelastLetter != firstLetter){
                         alert("入力された言葉の最初と、前の言葉の最後が違います。別の言葉を入力してください");    
                         return;
