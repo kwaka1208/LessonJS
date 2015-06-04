@@ -36,19 +36,16 @@
             //最初の文字の取得
             firstLetter = inputWord.charAt(0);
             
-            if(count == 0){
-                 if(lastLetter== "ん"){
-                    alert("最後が「ん」で終わっています。違う言葉を入力してください");   
-                 }else{
-                    document.getElementById("list").innerHTML += "<li>"+inputWord+"</li>";
-                }               
+            //判定ここから
+            if(lastLetter== "ん"){
+                    alert("最後が「ん」で終わっています。違う言葉を入力してください");     
+                return;
             }else{
-                 if(lastLetter== "ん"){
-                     alert("最後が「ん」で終わっています。違う言葉を入力してください");
-                     return;
-                 }else if(prelastLetter != firstLetter){
-                     alert("入力された言葉の最初と、前の言葉の最後が違います。別の言葉を入力してください");    
-                     return;
+                 if(count =! 0){
+                    if(prelastLetter != firstLetter){
+                        alert("入力された言葉の最初と、前の言葉の最後が違います。別の言葉を入力してください");    
+                        return;
+                            }
                  }else{
                     document.getElementById("list").innerHTML += "<li>"+inputWord+"</li>";
                 }  
@@ -90,7 +87,7 @@
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="js/bootstrap.min.js"></script>
+		<!-- <script src="js/bootstrap.min.js"></script>-->
 		</div>
 	</body>
 </html>
