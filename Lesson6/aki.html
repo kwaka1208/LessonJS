@@ -35,18 +35,19 @@
             lastLetter = inputWord.charAt(length-1);
             //最初の文字の取得
             firstLetter = inputWord.charAt(0);
-            
+
             //判定ここから
             if(lastLetter== "ん"){
                     alert("最後が「ん」で終わっています。違う言葉を入力してください");     
-                return;
+                    return;
             }else{
-                 if(count =! 0){　// <-ここを見直してください。今、ここで"count"の中身が"true"になってしまっています。
+                 if(count != 0){　// <-ここを見直してください。今、ここで"count"の中身が"true"になってしまっています。
 					 			 // （参考） http://www.pori2.net/js/kihon/10.html
-                    if(prelastLetter != firstLetter){
-                        alert("入力された言葉の最初と、前の言葉の最後が違います。別の言葉を入力してください");    
-                        return;
-                            }
+                        if(prelastLetter != firstLetter){
+                            alert("入力された言葉の最初と、前の言葉の最後が違います。別の言葉を入力してください");    
+                            return;
+                        }else{
+                            document.getElementById("list").innerHTML += "<li>"+inputWord+"</li>"; }
                  }else{
                     document.getElementById("list").innerHTML += "<li>"+inputWord+"</li>";
                 }  
